@@ -121,7 +121,6 @@ class Profile extends Component {
 											return (
 												<Step key={index} active={true}>
 													<StepLabel
-														onClick={console.log("hello")}
 														icon={<FontAwesomeIcon size="lg" icon={step.icon} />}
 														StepIconProps={{
 															classes: { root: classes.stepIcon },
