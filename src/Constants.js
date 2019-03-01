@@ -87,14 +87,14 @@ export const timeLine = [
 	},
 	{
 		icon: faUserGraduate,
-		time: "2014-2016",
+		time: "2014 - 2016",
 		label: "University of Massachusetts Dartmouth, M.S.",
 		description:
 			"Projects in GPU Computing with Performance and Benchmark Analysis"
 	},
 	{
 		icon: faUserGraduate,
-		time: "2011-2014",
+		time: "2011 - 2014",
 		label: "Vidyalankar Institute of Technology, B.E.",
 		description: "Online Assignment Submission Tool with Smart Plagarism"
 	}

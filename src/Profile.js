@@ -3,7 +3,7 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Card from "@material-ui/core/Card";
-import CardActionArea from "@material-ui/core/CardActionArea";
+// import CardActionArea from "@material-ui/core/CardActionArea";
 import CardActions from "@material-ui/core/CardActions";
 import CardHeader from "@material-ui/core/CardHeader";
 import CardContent from "@material-ui/core/CardContent";
@@ -21,6 +21,7 @@ import StepContent from "@material-ui/core/StepContent";
 import { styles, timeLine, URLs } from "../src/Constants";
 import withWidth from "@material-ui/core/withWidth";
 import compose from "recompose/compose";
+
 class Profile extends Component {
 	redirectHandler = param => {
 		this.props.history.replace(URLs[param]);
@@ -49,7 +50,7 @@ class Profile extends Component {
 					<Toolbar>
 						<Avatar className={classes.orangeAvatar}>MK</Avatar>
 						<Typography variant="subtitle1" color="inherit" className={classes.grow}>
-							It's the Journey, Not the destination
+							It's the Journey, not the Destination...
 						</Typography>
 						{/* <div>
             <Button color="inherit">Login</Button>
@@ -61,25 +62,37 @@ class Profile extends Component {
 				<Grid container spacing={16} className={classes.mainGrid}>
 					<Grid item sm={3} xs={12}>
 						<Card className={classes.profileCard}>
-							<CardActionArea>
-								<CardMedia
-									component="img"
-									alt="Profile Picture"
-									// height="140"
-									image={process.env.PUBLIC_URL + "/images/Headshot-02.jpg"}
-									title="Profile Picture"
-								/>
-								<CardContent>
-									<Typography variant="h5" component="h2">
+							<CardMedia
+								component="img"
+								alt="Profile Picture"
+								// height="140"
+								image={process.env.PUBLIC_URL + "/images/Headshot-02.jpg"}
+								title="Profile Picture"
+							/>
+							<CardContent>
+								<div style={{ display: "flex", alignItems: "center" }}>
+									<Typography variant="h5" component="h2" noWrap>
 										Mihir Kavatkar
 									</Typography>
-									<Typography component="p" gutterBottom>
-										Full Stack Software Developer <br />
-										Alzheimer's Therapeutic Research Institute <br />
-										Keck School of Medicine, USC.
+									&nbsp;&nbsp;
+									<Typography variant="caption" noWrap>
+										<a
+											href={
+												process.env.PUBLIC_URL + "/documents/Mihir Kavatkar-Resume.pdf"
+											}
+											download
+										>
+											[ Resume ]
+										</a>
 									</Typography>
-								</CardContent>
-							</CardActionArea>
+								</div>
+
+								<Typography component="p" gutterBottom>
+									Full Stack Software Developer <br />
+									Alzheimer's Therapeutic Research Institute <br />
+									Keck School of Medicine, USC.
+								</Typography>
+							</CardContent>
 							<CardActions>
 								<Button
 									size="small"
