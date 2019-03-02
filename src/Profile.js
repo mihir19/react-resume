@@ -27,10 +27,11 @@ class Profile extends Component {
 		this.props.history.replace(URLs[param]);
 	};
 
-	handleStep = () => {
-		// this.setState(state => ({
-		// 	activeStep: state.activeStep + 1
-		// }));
+	handleResume = () => {
+		window.open(
+			process.env.PUBLIC_URL + "/documents/Mihir Kavatkar-Resume.pdf",
+			"_blank"
+		);
 	};
 
 	constructor(props) {
@@ -39,7 +40,7 @@ class Profile extends Component {
 			activeStep: 0
 		};
 		this.redirectHandler = this.redirectHandler.bind(this);
-		this.handleStep = this.handleStep.bind(this);
+		this.handleResume = this.handleResume.bind(this);
 	}
 
 	render() {
@@ -76,13 +77,7 @@ class Profile extends Component {
 									</Typography>
 									&nbsp;&nbsp;
 									<Typography variant="caption" noWrap>
-										<a
-											href={
-												process.env.PUBLIC_URL + "/documents/Mihir Kavatkar-Resume.pdf"
-											}
-											target="_blank"
-											// download
-										>
+										<a href="/" onClick={this.handleResume}>
 											[ Resume ]
 										</a>
 									</Typography>
