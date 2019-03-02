@@ -28,14 +28,13 @@ class Profile extends Component {
 		this.props.history.replace(URLs[param]);
 	};
 
-	// Archived
-	// handleResume = () => {
-	// 	window.open(
-	// 		process.env.PUBLIC_URL + "/documents/Mihir Kavatkar-Resume.pdf",
-	// 		"_blank"
-	// 	);
-	// 	window.location.reload();
-	// };
+	handleResume = () => {
+		// window.open(
+		// 	process.env.PUBLIC_URL + "/documents/Mihir Kavatkar-Resume.pdf",
+		// 	"_blank"
+		// );
+		window.location.reload();
+	};
 
 	constructor(props) {
 		super(props);
@@ -43,7 +42,7 @@ class Profile extends Component {
 			activeStep: 0
 		};
 		this.redirectHandler = this.redirectHandler.bind(this);
-		// this.handleResume = this.handleResume.bind(this);
+		this.handleResume = this.handleResume.bind(this);
 	}
 
 	render() {
@@ -84,6 +83,7 @@ class Profile extends Component {
 											eventLabel="resumeDownload"
 											to={`${process.env.PUBLIC_URL}/documents/Mihir Kavatkar-Resume.pdf`}
 											target="_blank"
+											onClick={this.handleResume}
 										>
 											[ Resume ]
 										</OutboundLink>
