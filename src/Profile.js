@@ -80,7 +80,8 @@ class Profile extends Component {
 											href={
 												process.env.PUBLIC_URL + "/documents/Mihir Kavatkar-Resume.pdf"
 											}
-											download
+											target="_blank"
+											// download
 										>
 											[ Resume ]
 										</a>

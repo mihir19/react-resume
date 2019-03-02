@@ -25,7 +25,7 @@ deploy:
  # Name of the S3 bucket to which your site should be uploaded.
  bucket: react-material-resume
  # Region
- #  region: us-west-2
+ region: $AWS_DEFAULT_REGION
  # Prevent Travis from deleting your built site so it can be uploaded.
  skip_cleanup: true
  # Path to a directory containing your built site.
