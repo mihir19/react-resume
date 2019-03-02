@@ -21,7 +21,7 @@ import StepContent from "@material-ui/core/StepContent";
 import { styles, timeLine, URLs } from "../src/Constants";
 import withWidth from "@material-ui/core/withWidth";
 import compose from "recompose/compose";
-import { OutboundLink } from "react-ga";
+import ReactGA from "react-ga";
 
 class Profile extends Component {
 	redirectHandler = param => {
@@ -29,10 +29,14 @@ class Profile extends Component {
 	};
 
 	handleResume = () => {
-		// window.open(
-		// 	process.env.PUBLIC_URL + "/documents/Mihir Kavatkar-Resume.pdf",
-		// 	"_blank"
-		// );
+		ReactGA.event({
+			category: "Navigation",
+			action: "Clicked Resume Link"
+		});
+		window.open(
+			process.env.PUBLIC_URL + "/documents/Mihir Kavatkar-Resume.pdf",
+			"_blank"
+		);
 		window.location.reload();
 	};
 
@@ -79,14 +83,9 @@ class Profile extends Component {
 									</Typography>
 									&nbsp;&nbsp;
 									<Typography variant="caption" noWrap>
-										<OutboundLink
-											eventLabel="resumeDownload"
-											to={`${process.env.PUBLIC_URL}/documents/Mihir Kavatkar-Resume.pdf`}
-											target="_blank"
-											onClick={this.handleResume}
-										>
+										<a href="/" onClick={this.handleResume}>
 											[ Resume ]
-										</OutboundLink>
+										</a>
 									</Typography>
 								</div>
 
