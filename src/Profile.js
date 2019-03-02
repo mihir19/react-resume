@@ -32,6 +32,7 @@ class Profile extends Component {
 			process.env.PUBLIC_URL + "/documents/Mihir Kavatkar-Resume.pdf",
 			"_blank"
 		);
+		window.location.reload();
 	};
 
 	constructor(props) {
