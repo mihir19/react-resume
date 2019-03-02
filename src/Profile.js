@@ -22,7 +22,7 @@ import { styles, timeLine, URLs } from "../src/Constants";
 import withWidth from "@material-ui/core/withWidth";
 import compose from "recompose/compose";
 import ReactGA from "react-ga";
-
+import { OutboundLink } from "react-ga";
 class Profile extends Component {
 	redirectHandler = param => {
 		this.props.history.replace(URLs[param]);
@@ -83,14 +83,13 @@ class Profile extends Component {
 									</Typography>
 									&nbsp;&nbsp;
 									<Typography variant="caption" noWrap>
-										<a
-											href="https://s3-us-west-2.amazonaws.com/react-material-resume/documents/Mihir+Kavatkar-Resume.pdf"
-											// onClick={this.handleResume}
+										<OutboundLink
+											eventLabel="resumeDownload"
+											to="https://s3-us-west-2.amazonaws.com/react-material-resume/documents/Mihir+Kavatkar-Resume.pdf"
 											target="_blank"
-											rel="noopener noreferrer"
 										>
 											[ Resume ]
-										</a>
+										</OutboundLink>
 									</Typography>
 								</div>
 
