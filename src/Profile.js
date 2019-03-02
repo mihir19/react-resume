@@ -21,19 +21,21 @@ import StepContent from "@material-ui/core/StepContent";
 import { styles, timeLine, URLs } from "../src/Constants";
 import withWidth from "@material-ui/core/withWidth";
 import compose from "recompose/compose";
+import { OutboundLink } from "react-ga";
 
 class Profile extends Component {
 	redirectHandler = param => {
 		this.props.history.replace(URLs[param]);
 	};
 
-	handleResume = () => {
-		window.open(
-			process.env.PUBLIC_URL + "/documents/Mihir Kavatkar-Resume.pdf",
-			"_blank"
-		);
-		window.location.reload();
-	};
+	// Archived
+	// handleResume = () => {
+	// 	window.open(
+	// 		process.env.PUBLIC_URL + "/documents/Mihir Kavatkar-Resume.pdf",
+	// 		"_blank"
+	// 	);
+	// 	window.location.reload();
+	// };
 
 	constructor(props) {
 		super(props);
@@ -41,7 +43,7 @@ class Profile extends Component {
 			activeStep: 0
 		};
 		this.redirectHandler = this.redirectHandler.bind(this);
-		this.handleResume = this.handleResume.bind(this);
+		// this.handleResume = this.handleResume.bind(this);
 	}
 
 	render() {
@@ -78,9 +80,13 @@ class Profile extends Component {
 									</Typography>
 									&nbsp;&nbsp;
 									<Typography variant="caption" noWrap>
-										<a href="/" onClick={this.handleResume}>
+										<OutboundLink
+											eventLabel="resumeDownload"
+											to={`${process.env.PUBLIC_URL}/documents/Mihir Kavatkar-Resume.pdf`}
+											target="_blank"
+										>
 											[ Resume ]
-										</a>
+										</OutboundLink>
 									</Typography>
 								</div>
 

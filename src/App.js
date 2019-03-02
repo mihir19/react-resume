@@ -14,9 +14,9 @@ import { withStyles } from "@material-ui/core";
 
 import { deepOrange } from "@material-ui/core/colors";
 import Profile from "../src/Profile";
-// import Link from "@material-ui/core/Link";
+import { initializeReactGA } from "./analytics";
 
-// const aptWebStudy = props => <RouterLink to="www.aptwebstudy.org" {...props} />;
+initializeReactGA();
 
 library.add(fab, faEnvelope, faUserGraduate, faIdBadge, faBriefcase);
 const styles = theme => ({
