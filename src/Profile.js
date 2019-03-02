@@ -87,6 +87,7 @@ class Profile extends Component {
 											href="https://s3-us-west-2.amazonaws.com/react-material-resume/documents/Mihir+Kavatkar-Resume.pdf"
 											// onClick={this.handleResume}
 											target="_blank"
+											rel="noopener noreferrer"
 										>
 											[ Resume ]
 										</a>
