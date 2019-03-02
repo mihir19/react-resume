@@ -37,7 +37,7 @@ class Profile extends Component {
 			process.env.PUBLIC_URL + "/documents/Mihir Kavatkar-Resume.pdf",
 			"_blank"
 		);
-		window.location.reload();
+		// window.location.reload();
 	};
 
 	constructor(props) {
@@ -83,7 +83,11 @@ class Profile extends Component {
 									</Typography>
 									&nbsp;&nbsp;
 									<Typography variant="caption" noWrap>
-										<a href="/" onClick={this.handleResume}>
+										<a
+											href="https://s3-us-west-2.amazonaws.com/react-material-resume/documents/Mihir+Kavatkar-Resume.pdf"
+											// onClick={this.handleResume}
+											target="_blank"
+										>
 											[ Resume ]
 										</a>
 									</Typography>
