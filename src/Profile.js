@@ -23,6 +23,7 @@ import withWidth from "@material-ui/core/withWidth";
 import compose from "recompose/compose";
 import ReactGA from "react-ga";
 import { OutboundLink } from "react-ga";
+
 class Profile extends Component {
 	redirectHandler = param => {
 		this.props.history.replace(URLs[param]);
@@ -96,7 +97,9 @@ class Profile extends Component {
 								<Typography component="p" gutterBottom>
 									Full Stack Software Developer <br />
 									Alzheimer's Therapeutic Research Institute <br />
-									Keck School of Medicine, USC.
+									Keck School of Medicine, USC. <br />
+									Email:
+									<a href="mailto:mkavatkar157@gmail.com"> mkavatkar157@gmail.com</a>
 								</Typography>
 							</CardContent>
 							<CardActions>
@@ -106,6 +109,11 @@ class Profile extends Component {
 									target="_blank"
 									href={URLs.linkedIn}
 								>
+									<FontAwesomeIcon
+										icon={["fab", "linkedin"]}
+										// size="lg"
+										style={{ marginRight: "0.5em" }}
+									/>
 									LinkedIn
 								</Button>
 								<Button
@@ -114,9 +122,19 @@ class Profile extends Component {
 									target="_blank"
 									href={URLs.facebook}
 								>
+									<FontAwesomeIcon
+										icon={["fab", "facebook"]}
+										// size="lg"
+										style={{ marginRight: "0.5em" }}
+									/>
 									Facebook
 								</Button>
 								<Button size="small" color="primary" target="_blank" href={URLs.gitHub}>
+									<FontAwesomeIcon
+										icon={["fab", "github"]}
+										// size="lg"
+										style={{ marginRight: "0.5em" }}
+									/>{" "}
 									Github
 								</Button>
 							</CardActions>
