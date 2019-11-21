@@ -63,6 +63,18 @@ export const styles = theme => ({
 	playIcon: {
 		height: 38,
 		width: 38
+	},
+	portfolio: {
+		width: "100%",
+		marginTop: theme.spacing.unit * 3,
+		overflowX: "auto"
+	},
+	table: {
+		minWidth: 100
+	},
+	deepOrange: {
+		color: "#777",
+		backgroundColor: deepOrange[500]
 	}
 });
 

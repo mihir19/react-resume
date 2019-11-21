@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { BrowserRouter, Route } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import {
 	faEnvelope,
 	faIdBadge,
@@ -14,6 +14,7 @@ import { withStyles } from "@material-ui/core";
 
 import { deepOrange } from "@material-ui/core/colors";
 import Profile from "../src/Profile";
+import Portfolio from "../src/Portfolio";
 import { initializeReactGA } from "./analytics";
 
 initializeReactGA();
@@ -73,7 +74,10 @@ class App extends Component {
 	render() {
 		return (
 			<BrowserRouter>
-				<Route path="/" render={props => <Profile {...props} />} />
+				<Switch>
+					<Route exact path="/" render={props => <Profile {...props} />} />
+					<Route path="/portfolio" render={props => <Portfolio {...props} />} />
+				</Switch>
 			</BrowserRouter>
 		);
 	}
