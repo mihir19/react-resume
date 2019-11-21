@@ -69,7 +69,14 @@ export const styles = theme => ({
 export const timeLine = [
 	{
 		icon: faBriefcase,
-		time: "2016 - now",
+		time: "Oct 2019 - Present",
+		label:
+			"Bioinformatics Software Engineer III at Memorial Sloan Kettering Cancer Center",
+		description: ""
+	},
+	{
+		icon: faBriefcase,
+		time: "Aug 2016 - Oct 2019",
 		label: "Full Stack Developer at Keck School of Medicine, USC",
 		description: "Full Stack App Development in HeathTech"
 	},
